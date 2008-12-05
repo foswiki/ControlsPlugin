@@ -229,7 +229,7 @@ sub getListOfFieldValues
       my $lines = 0;
       foreach my $item ( @posValues ) {
 	my $expandedItem = $session->handleCommonTags( $item, $webName, $topic );
-	$val .= "\n<td><input class=\"twikiEditFormCheckboxField\" type=\"checkbox\" name=\"$name$item\" />$expandedItem &nbsp;&nbsp;</td>";
+	$val .= "\n<td><input class=\"foswikiCheckBox\" type=\"checkbox\" name=\"$name$item\" />$expandedItem &nbsp;&nbsp;</td>";
 	if( $size > 0 && ($lines % $size == $size - 1 ) ) {
 	  $val .= "\n</tr><tr>";
 	}
@@ -242,7 +242,7 @@ sub getListOfFieldValues
       my $lines = 0;
       foreach my $item ( @posValues ) {
 	my $expandedItem = $session->handleCommonTags( $item, $webName, $topic );
-	$val .= "\n<td><input class=\"twikiEditFormRadioField twikiRadioButton\" type=\"radio\" name=\"$name\" value=\"$item\" />$expandedItem &nbsp;&nbsp;</td>";
+	$val .= "\n<td><input class=\"foswikiRadioButton\" type=\"radio\" name=\"$name\" value=\"$item\" />$expandedItem &nbsp;&nbsp;</td>";
 	if( $size > 0 && ($lines % $size == $size - 1 ) ) {
 	  $val .= "\n</tr><tr>";
 	}
